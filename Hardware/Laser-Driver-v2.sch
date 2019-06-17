@@ -1,9 +1,9 @@
 EESchema Schematic File Version 4
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -591,12 +591,12 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5CDE8E37
-P 5500 1950
-F 0 "R?" H 5570 1996 50  0000 L CNN
-F 1 "1k" H 5570 1905 50  0000 L CNN
-F 2 "" V 5430 1950 50  0001 C CNN
-F 3 "~" H 5500 1950 50  0001 C CNN
-	1    5500 1950
+P 5450 1950
+F 0 "R?" H 5520 1996 50  0000 L CNN
+F 1 "1k" H 5520 1905 50  0000 L CNN
+F 2 "" V 5380 1950 50  0001 C CNN
+F 3 "~" H 5450 1950 50  0001 C CNN
+	1    5450 1950
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -606,16 +606,14 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5CDE7B2D
-P 5500 1650
-F 0 "R?" H 5570 1696 50  0000 L CNN
-F 1 "7k" H 5570 1605 50  0000 L CNN
-F 2 "" V 5430 1650 50  0001 C CNN
-F 3 "~" H 5500 1650 50  0001 C CNN
-	1    5500 1650
+P 5450 1650
+F 0 "R?" H 5520 1696 50  0000 L CNN
+F 1 "12k" H 5520 1605 50  0000 L CNN
+F 2 "" V 5380 1650 50  0001 C CNN
+F 3 "~" H 5450 1650 50  0001 C CNN
+	1    5450 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5500 1500 5850 1500
 $Comp
 L Device:R R?
 U 1 1 5CE320BC
@@ -893,12 +891,12 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5CDED2D0
-P 5750 2150
-F 0 "#PWR?" H 5750 1900 50  0001 C CNN
-F 1 "GND" H 5755 1977 50  0000 C CNN
-F 2 "" H 5750 2150 50  0001 C CNN
-F 3 "" H 5750 2150 50  0001 C CNN
-	1    5750 2150
+P 5750 2300
+F 0 "#PWR?" H 5750 2050 50  0001 C CNN
+F 1 "GND" H 5755 2127 50  0000 C CNN
+F 2 "" H 5750 2300 50  0001 C CNN
+F 3 "" H 5750 2300 50  0001 C CNN
+	1    5750 2300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -915,20 +913,16 @@ Wire Wire Line
 	6450 1700 6850 1700
 Connection ~ 6850 1700
 Wire Wire Line
-	5500 2100 5750 2100
+	5450 2100 5750 2100
 Connection ~ 5750 2100
 Wire Wire Line
-	5750 2100 5750 2150
-Wire Wire Line
-	5500 1800 5650 1800
+	5750 2100 5750 2300
 Wire Wire Line
 	5650 1800 5650 2000
-Connection ~ 5500 1800
 Wire Wire Line
 	5200 3700 5200 1500
 Wire Wire Line
-	5200 1500 5500 1500
-Connection ~ 5500 1500
+	5200 1500 5450 1500
 Wire Wire Line
 	5750 4600 6050 4600
 Wire Wire Line
@@ -1009,4 +1003,20 @@ Wire Wire Line
 	9700 4550 9500 4550
 Wire Wire Line
 	9500 4700 9700 4700
+$Sheet
+S 8550 1150 1150 1000
+U 5D12441E
+F0 "Power" 50
+F1 "Power.sch" 50
+$EndSheet
+Text Notes 2250 1600 0    50   ~ 0
+Internal Gain: 2.5
+Text Notes 5850 2200 0    50   ~ 0
+Second stage amplifier:\nGain 13
+Connection ~ 5450 1500
+Wire Wire Line
+	5450 1500 5850 1500
+Connection ~ 5450 1800
+Wire Wire Line
+	5450 1800 5650 1800
 $EndSCHEMATC
