@@ -439,4 +439,8 @@ Wire Wire Line
 	5150 1600 5150 1750
 Text GLabel 4150 5650 0    50   Input ~ 0
 GND
+Text HLabel 7350 2850 2    50   Input ~ 0
+TempSense
+Wire Wire Line
+	7350 2850 6400 2850
 $EndSCHEMATC
