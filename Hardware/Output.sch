@@ -69,11 +69,11 @@ Connection ~ 3750 4200
 Wire Wire Line
 	3750 4200 4400 4200
 Wire Wire Line
-	3650 2050 3650 1850
+	3650 2050 3650 1650
 Wire Wire Line
-	3750 2050 3750 1850
+	3750 2050 3750 1650
 Wire Wire Line
-	3750 1850 3700 1850
+	3750 1650 3700 1650
 $Comp
 L Device:R R?
 U 1 1 5D0D12BB
@@ -295,7 +295,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm185-adj.pdf" H 9200 2650 50  0001 C CIN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	9200 1600 9200 1900
+	9200 1600 9200 1700
 $Comp
 L Device:R R?
 U 1 1 5D17E776
@@ -378,17 +378,16 @@ Amplifier stage converts \nthe current output of the DAC \nto +5.25V +- 0.75V\n-
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5D1B0B7D
-P 3700 1850
-F 0 "#PWR?" H 3700 1700 50  0001 C CNN
-F 1 "+3.3V" H 3715 2023 50  0000 C CNN
-F 2 "" H 3700 1850 50  0001 C CNN
-F 3 "" H 3700 1850 50  0001 C CNN
-	1    3700 1850
+P 3700 1650
+F 0 "#PWR?" H 3700 1500 50  0001 C CNN
+F 1 "+3.3V" H 3715 1823 50  0000 C CNN
+F 2 "" H 3700 1650 50  0001 C CNN
+F 3 "" H 3700 1650 50  0001 C CNN
+	1    3700 1650
 	1    0    0    -1  
 $EndComp
-Connection ~ 3700 1850
 Wire Wire Line
-	3700 1850 3650 1850
+	3700 1650 3650 1650
 Wire Wire Line
 	4350 3050 4800 3050
 Wire Wire Line
@@ -420,7 +419,7 @@ Wire Wire Line
 	7350 2400 7500 2400
 Connection ~ 8100 2400
 Wire Wire Line
-	8100 2400 8100 1850
+	8100 2400 8100 1950
 $Comp
 L power:+9V #PWR?
 U 1 1 5D09D7FB
@@ -594,4 +593,29 @@ F 3 "" H 9200 1600 50  0001 C CNN
 	1    9200 1600
 	1    0    0    -1  
 $EndComp
+Text GLabel 8200 1950 2    50   Input ~ 0
++9V
+Wire Wire Line
+	8200 1950 8100 1950
+Connection ~ 8100 1950
+Wire Wire Line
+	8100 1950 8100 1850
+Text GLabel 9300 1700 2    50   Input ~ 0
++12V
+Wire Wire Line
+	9300 1700 9200 1700
+Connection ~ 9200 1700
+Wire Wire Line
+	9200 1700 9200 1900
+Text GLabel 3850 1650 2    50   Input ~ 0
++3.3V
+Connection ~ 3700 1650
+Wire Wire Line
+	3750 1650 3850 1650
+Connection ~ 3750 1650
+Text GLabel 3550 4200 0    50   Input ~ 0
+GND
+Wire Wire Line
+	3550 4200 3650 4200
+Connection ~ 3650 4200
 $EndSCHEMATC

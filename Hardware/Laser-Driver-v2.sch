@@ -308,15 +308,15 @@ Wire Wire Line
 Wire Wire Line
 	1750 3000 2250 3000
 $Sheet
-S 8550 3350 600  500 
+S 8550 3350 1050 650 
 U 5D12441E
 F0 "Power" 50
 F1 "Power.sch" 50
 F2 "+12V" I L 8550 3450 50 
-F3 "GND" I R 9150 3450 50 
-F4 "+5V" I L 8550 3650 50 
-F5 "+3.3V" I L 8550 3750 50 
-F6 "+9V" I L 8550 3550 50 
+F3 "GND" I R 9600 3450 50 
+F4 "+5V" I L 8550 3750 50 
+F5 "+3.3V" I L 8550 3900 50 
+F6 "+9V" I L 8550 3600 50 
 $EndSheet
 Text Notes 4100 7050 0    50   ~ 0
 Internal Gain: 2.5
@@ -485,29 +485,9 @@ Wire Wire Line
 	1950 5650 1950 3350
 Wire Wire Line
 	1950 3350 1750 3350
-Text GLabel 8450 3450 0    50   Input ~ 0
-+12V
-Text GLabel 8450 3550 0    50   Input ~ 0
-+9V
-Text GLabel 8450 3650 0    50   Input ~ 0
-+5V
-Text GLabel 8450 3750 0    50   Input ~ 0
-+3.3V
-Text GLabel 9250 3450 2    50   Input ~ 0
-GND
-Wire Wire Line
-	8450 3450 8550 3450
-Wire Wire Line
-	8450 3550 8550 3550
-Wire Wire Line
-	8450 3650 8550 3650
-Wire Wire Line
-	8450 3750 8550 3750
 Connection ~ 5500 3000
 Wire Wire Line
 	5500 3000 5500 2900
-Wire Wire Line
-	9150 3450 9250 3450
 $Comp
 L power:+5V #PWR?
 U 1 1 5CDED736

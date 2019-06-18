@@ -433,4 +433,10 @@ Wire Wire Line
 	6400 2650 7350 2650
 Wire Wire Line
 	6400 2750 7350 2750
+Text GLabel 5150 1600 1    50   Input ~ 0
++3.3V
+Wire Wire Line
+	5150 1600 5150 1750
+Text GLabel 4150 5650 0    50   Input ~ 0
+GND
 $EndSCHEMATC

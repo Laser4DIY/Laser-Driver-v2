@@ -273,7 +273,7 @@ Wire Wire Line
 Wire Wire Line
 	7000 2750 7350 2750
 Wire Wire Line
-	7350 2750 7350 2650
+	7350 2750 7350 2600
 Connection ~ 7000 2750
 Wire Wire Line
 	6450 3750 7000 3750
@@ -283,12 +283,12 @@ Connection ~ 6450 3750
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5D14546C
-P 7350 2650
-F 0 "#PWR?" H 7350 2500 50  0001 C CNN
-F 1 "+3.3V" H 7365 2823 50  0000 C CNN
-F 2 "" H 7350 2650 50  0001 C CNN
-F 3 "" H 7350 2650 50  0001 C CNN
-	1    7350 2650
+P 7350 2450
+F 0 "#PWR?" H 7350 2300 50  0001 C CNN
+F 1 "+3.3V" H 7365 2623 50  0000 C CNN
+F 2 "" H 7350 2450 50  0001 C CNN
+F 3 "" H 7350 2450 50  0001 C CNN
+	1    7350 2450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -467,7 +467,7 @@ Wire Wire Line
 Wire Wire Line
 	10100 3000 10150 3000
 Wire Wire Line
-	10450 3000 10450 2550
+	10450 3000 10450 2750
 Wire Wire Line
 	10150 3150 10150 3000
 Connection ~ 10150 3000
@@ -557,4 +557,26 @@ Text HLabel 10650 2550 2    50   Input ~ 0
 +9V
 Wire Wire Line
 	10650 2550 10450 2550
+Text GLabel 1950 2450 0    50   Input ~ 0
++12V
+Text GLabel 5500 2600 0    50   Input ~ 0
++5V
+Text GLabel 7250 2600 0    50   Input ~ 0
++3.3V
+Wire Wire Line
+	1950 2450 2150 2450
+Wire Wire Line
+	5500 2600 5700 2600
+Wire Wire Line
+	7250 2600 7350 2600
+Connection ~ 7350 2600
+Wire Wire Line
+	7350 2600 7350 2450
+Text GLabel 10650 2750 2    50   Input ~ 0
++9V
+Wire Wire Line
+	10650 2750 10450 2750
+Connection ~ 10450 2750
+Wire Wire Line
+	10450 2750 10450 2550
 $EndSCHEMATC
