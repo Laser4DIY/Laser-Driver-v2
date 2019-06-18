@@ -3,7 +3,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 3 5
 Title ""
 Date ""
 Rev ""
@@ -29,36 +29,36 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5D0D12A3
-P 4450 4200
+P 4500 4200
 AR Path="/5D0D12A3" Ref="#PWR?"  Part="1" 
 AR Path="/5D0C0D63/5D0D12A3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4450 3950 50  0001 C CNN
-F 1 "GND" H 4455 4027 50  0000 C CNN
-F 2 "" H 4450 4200 50  0001 C CNN
-F 3 "" H 4450 4200 50  0001 C CNN
-	1    4450 4200
+F 0 "#PWR?" H 4500 3950 50  0001 C CNN
+F 1 "GND" H 4505 4027 50  0000 C CNN
+F 2 "" H 4500 4200 50  0001 C CNN
+F 3 "" H 4500 4200 50  0001 C CNN
+	1    4500 4200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4450 4200 4450 3650
+	4500 4200 4500 3650
 Wire Wire Line
-	4450 3650 4350 3650
+	4500 3650 4350 3650
 $Comp
 L Device:C C?
 U 1 1 5D0D12AB
-P 4550 3700
+P 4700 3700
 AR Path="/5D0D12AB" Ref="C?"  Part="1" 
 AR Path="/5D0C0D63/5D0D12AB" Ref="C?"  Part="1" 
-F 0 "C?" H 4435 3654 50  0000 R CNN
-F 1 "100nF" H 4435 3745 50  0000 R CNN
-F 2 "" H 4588 3550 50  0001 C CNN
-F 3 "~" H 4550 3700 50  0001 C CNN
-	1    4550 3700
+F 0 "C?" H 4585 3654 50  0000 R CNN
+F 1 "100nF" H 4585 3745 50  0000 R CNN
+F 2 "" H 4738 3550 50  0001 C CNN
+F 3 "~" H 4700 3700 50  0001 C CNN
+	1    4700 3700
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4350 3550 4550 3550
-Connection ~ 4450 4200
+	4350 3550 4700 3550
+Connection ~ 4500 4200
 Wire Wire Line
 	3650 4050 3650 4200
 Wire Wire Line
@@ -93,12 +93,12 @@ Wire Wire Line
 	4400 3450 4400 4200
 Connection ~ 4400 4200
 Wire Wire Line
-	4400 4200 4450 4200
+	4400 4200 4500 4200
 NoConn ~ 4350 2950
 Wire Wire Line
-	4550 3850 4550 4200
+	4700 3850 4700 4200
 Wire Wire Line
-	4450 4200 4550 4200
+	4500 4200 4700 4200
 Text Notes 4550 3550 0    50   ~ 0
 1.92k: 10mA\n3.84k: 20mA
 Text HLabel 3000 2450 0    50   Input ~ 0
@@ -181,10 +181,10 @@ F 3 "~" H 5450 3450 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4550 4200 4800 4200
+	4700 4200 4800 4200
 Wire Wire Line
 	5450 4200 5450 3600
-Connection ~ 4550 4200
+Connection ~ 4700 4200
 Wire Wire Line
 	5450 3300 5450 2400
 Wire Wire Line
@@ -294,17 +294,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm185-adj.pdf" H 9200 2650 50  0001 C CIN
 	1    9200 2650
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5D17CC85
-P 9200 1600
-F 0 "#PWR?" H 9200 1450 50  0001 C CNN
-F 1 "+12V" H 9215 1773 50  0000 C CNN
-F 2 "" H 9200 1600 50  0001 C CNN
-F 3 "" H 9200 1600 50  0001 C CNN
-	1    9200 1600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9200 1600 9200 1900
 $Comp
@@ -384,8 +373,8 @@ Text Notes 4550 2400 0    50   ~ 0
 0-20mA: 0V-0.5V
 Text Notes 4550 2950 0    50   ~ 0
 20-0mA: 0.5V-0V
-Text Notes 5950 1950 0    50   ~ 0
-Amplifier stage converts \nthe current output of the DAC \nto +5.25V +- 0.75V\n-> 4.5-6V
+Text Notes 5950 2100 0    50   ~ 0
+Amplifier stage converts \nthe current output of the DAC \nto +5.25V +- 0.75V\n-> 4.5-6V\n(MOSFET \nIRFP4568)
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5D1B0B7D
@@ -407,7 +396,7 @@ Wire Wire Line
 Connection ~ 4800 4200
 Wire Wire Line
 	4800 4200 5150 4200
-Text HLabel 7400 1350 1    50   Input ~ 0
+Text HLabel 7500 1350 1    50   Input ~ 0
 MOSFET-OUT
 $Comp
 L OS-LD:THS3091 U?
@@ -428,7 +417,7 @@ Wire Wire Line
 	6250 2500 6250 2950
 Connection ~ 6250 2950
 Wire Wire Line
-	7350 2400 7400 2400
+	7350 2400 7500 2400
 Connection ~ 8100 2400
 Wire Wire Line
 	8100 2400 8100 1850
@@ -482,7 +471,7 @@ Wire Wire Line
 	6400 3650 6400 4200
 Connection ~ 6400 4200
 Wire Wire Line
-	6400 4200 7700 4200
+	6400 4200 7750 4200
 Wire Wire Line
 	6700 3450 6600 3450
 Wire Wire Line
@@ -501,21 +490,21 @@ Connection ~ 8800 4200
 $Comp
 L Device:C C?
 U 1 1 5D0C651A
-P 7700 3600
+P 7750 3600
 AR Path="/5D0C651A" Ref="C?"  Part="1" 
 AR Path="/5D0C0D63/5D0C651A" Ref="C?"  Part="1" 
-F 0 "C?" H 7585 3554 50  0000 R CNN
-F 1 "100nF" H 7585 3645 50  0000 R CNN
-F 2 "" H 7738 3450 50  0001 C CNN
-F 3 "~" H 7700 3600 50  0001 C CNN
-	1    7700 3600
+F 0 "C?" H 7635 3554 50  0000 R CNN
+F 1 "100nF" H 7635 3645 50  0000 R CNN
+F 2 "" H 7788 3450 50  0001 C CNN
+F 3 "~" H 7750 3600 50  0001 C CNN
+	1    7750 3600
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7700 3750 7700 4200
-Connection ~ 7700 4200
+	7750 3750 7750 4200
+Connection ~ 7750 4200
 Wire Wire Line
-	7700 4200 8100 4200
+	7750 4200 8100 4200
 Wire Wire Line
 	6400 2600 6650 2600
 Wire Wire Line
@@ -532,41 +521,41 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5D0D5F3D
-P 7400 2150
-F 0 "R?" V 7607 2150 50  0000 C CNN
-F 1 "25R" V 7516 2150 50  0000 C CNN
-F 2 "" V 7330 2150 50  0001 C CNN
-F 3 "~" H 7400 2150 50  0001 C CNN
-	1    7400 2150
+P 7500 2150
+F 0 "R?" V 7707 2150 50  0000 C CNN
+F 1 "25R" V 7616 2150 50  0000 C CNN
+F 2 "" V 7430 2150 50  0001 C CNN
+F 3 "~" H 7500 2150 50  0001 C CNN
+	1    7500 2150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7400 1350 7400 1900
+	7500 1350 7500 1900
 Wire Wire Line
-	7400 1900 7400 2000
+	7500 1900 7500 2000
 Wire Wire Line
-	7400 2300 7400 2400
-Connection ~ 7400 2400
+	7500 2300 7500 2400
+Connection ~ 7500 2400
 Wire Wire Line
-	7400 2400 8100 2400
+	7500 2400 8100 2400
 $Comp
 L Device:R R?
 U 1 1 5D0DB2E7
-P 7700 2650
-F 0 "R?" V 7907 2650 50  0000 C CNN
-F 1 "25R" V 7816 2650 50  0000 C CNN
-F 2 "" V 7630 2650 50  0001 C CNN
-F 3 "~" H 7700 2650 50  0001 C CNN
-	1    7700 2650
+P 7750 2600
+F 0 "R?" V 7957 2600 50  0000 C CNN
+F 1 "25R" V 7866 2600 50  0000 C CNN
+F 2 "" V 7680 2600 50  0001 C CNN
+F 3 "~" H 7750 2600 50  0001 C CNN
+	1    7750 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7700 2800 7700 3450
+	7750 2750 7750 3450
 Wire Wire Line
-	7700 2500 7700 1900
+	7750 2450 7750 1900
 Wire Wire Line
-	7400 3450 7700 3450
-Connection ~ 7700 3450
+	7400 3450 7750 3450
+Connection ~ 7750 3450
 Text Notes 6600 4100 0    50   ~ 0
 Optional follower Opamp\nto increase current output \nof the amplifier stage from \n250mA to 500mA max
 Wire Notes Line
@@ -590,8 +579,19 @@ Wire Notes Line
 Wire Notes Line
 	6300 2900 8450 2900
 Wire Wire Line
-	7700 1900 7400 1900
-Connection ~ 7400 1900
+	7750 1900 7500 1900
+Connection ~ 7500 1900
 Wire Wire Line
-	7350 1900 7400 1900
+	7350 1900 7500 1900
+$Comp
+L power:+12V #PWR?
+U 1 1 5D17CC85
+P 9200 1600
+F 0 "#PWR?" H 9200 1450 50  0001 C CNN
+F 1 "+12V" H 9215 1773 50  0000 C CNN
+F 2 "" H 9200 1600 50  0001 C CNN
+F 3 "" H 9200 1600 50  0001 C CNN
+	1    9200 1600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -86,7 +86,7 @@ Wire Wire Line
 	1750 3050 2150 3050
 Connection ~ 2150 3050
 Wire Wire Line
-	2150 2350 2150 2850
+	2150 2350 2150 2450
 $Comp
 L power:GND #PWR?
 U 1 1 5D13CC38
@@ -183,7 +183,7 @@ Connection ~ 3950 2950
 Wire Wire Line
 	5150 2950 5700 2950
 Wire Wire Line
-	5700 2550 5700 2750
+	5700 2550 5700 2600
 Connection ~ 5700 2750
 Wire Wire Line
 	5700 2750 5700 2950
@@ -530,4 +530,31 @@ $EndComp
 Wire Wire Line
 	5700 3200 5700 2950
 Connection ~ 5700 2950
+Text HLabel 2250 2450 2    50   Input ~ 0
++12V
+Wire Wire Line
+	2150 2450 2250 2450
+Connection ~ 2150 2450
+Wire Wire Line
+	2150 2450 2150 2850
+Text HLabel 2000 3750 0    50   Input ~ 0
+GND
+Wire Wire Line
+	2000 3750 2150 3750
+Text HLabel 5750 2600 2    50   Input ~ 0
++5V
+Wire Wire Line
+	5750 2600 5700 2600
+Connection ~ 5700 2600
+Wire Wire Line
+	5700 2600 5700 2750
+Text HLabel 7500 2750 2    50   Input ~ 0
++3.3V
+Wire Wire Line
+	7500 2750 7350 2750
+Connection ~ 7350 2750
+Text HLabel 10650 2550 2    50   Input ~ 0
++9V
+Wire Wire Line
+	10650 2550 10450 2550
 $EndSCHEMATC

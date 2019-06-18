@@ -3,7 +3,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 2 5
 Title ""
 Date ""
 Rev ""
@@ -421,4 +421,16 @@ Wire Wire Line
 	6400 3550 7350 3550
 Wire Wire Line
 	6400 3650 7350 3650
+Text HLabel 7350 2550 2    50   Input ~ 0
+ADC-SHUNT
+Wire Wire Line
+	7350 2550 6400 2550
+Text HLabel 7350 2650 2    50   Input ~ 0
+OCStatus
+Text HLabel 7350 2750 2    50   Input ~ 0
+OCControl
+Wire Wire Line
+	6400 2650 7350 2650
+Wire Wire Line
+	6400 2750 7350 2750
 $EndSCHEMATC
