@@ -15,78 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:C C7
-U 1 1 5CDEE828
-P 10100 1950
-F 0 "C7" V 9848 1950 50  0000 C CNN
-F 1 "100nF" V 9939 1950 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10138 1800 50  0001 C CNN
-F 3 "~" H 10100 1950 50  0001 C CNN
-	1    10100 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5CDFB610
-P 9200 2300
-F 0 "R4" V 8993 2300 50  0000 C CNN
-F 1 "1k" V 9084 2300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9130 2300 50  0001 C CNN
-F 3 "~" H 9200 2300 50  0001 C CNN
-	1    9200 2300
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 5CDFBA7F
-P 9700 2300
-F 0 "R6" V 9493 2300 50  0000 C CNN
-F 1 "1k" V 9584 2300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 9630 2300 50  0001 C CNN
-F 3 "~" H 9700 2300 50  0001 C CNN
-	1    9700 2300
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C5
-U 1 1 5CDFBC7C
-P 9450 2450
-F 0 "C5" H 9565 2496 50  0000 L CNN
-F 1 "10pF" H 9565 2405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9488 2300 50  0001 C CNN
-F 3 "~" H 9450 2450 50  0001 C CNN
-	1    9450 2450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9350 2300 9450 2300
-Wire Wire Line
-	9450 2300 9550 2300
-$Comp
-L power:GND #PWR03
-U 1 1 5CE00065
-P 9450 2650
-F 0 "#PWR03" H 9450 2400 50  0001 C CNN
-F 1 "GND" H 9455 2477 50  0000 C CNN
-F 2 "" H 9450 2650 50  0001 C CNN
-F 3 "" H 9450 2650 50  0001 C CNN
-	1    9450 2650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9450 2600 9450 2650
-$Comp
-L Device:R R3
-U 1 1 5CDE8E37
-P 8550 1500
-F 0 "R3" H 8620 1546 50  0000 L CNN
-F 1 "1k" H 8620 1455 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8480 1500 50  0001 C CNN
-F 3 "~" H 8550 1500 50  0001 C CNN
-	1    8550 1500
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:GND #PWR06
 U 1 1 5CDC96ED
 P 6150 7300
@@ -108,27 +36,12 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/PSMN0R7-25YLD.pdf" H 6050 
 	1    6050 3900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9100 1350 8800 1350
-Wire Wire Line
-	8800 1350 8800 1650
-Wire Wire Line
-	9700 1450 9700 1550
-Wire Wire Line
-	9700 1550 8700 1550
-Wire Wire Line
-	9700 1250 10100 1250
-Wire Wire Line
-	8550 1650 8800 1650
-Connection ~ 8800 1650
-Wire Wire Line
-	8700 1350 8700 1550
 Text Notes 3900 2400 0    50   ~ 0
 Alternative for TLV3541: THS4271
 $Sheet
 S 600  1400 1000 2150
 U 5D037190
-F0 "STM32 Schematic" 50
+F0 "Teensy" 50
 F1 "STM32.sch" 50
 F2 "DAC-D0" I R 1600 1500 50 
 F3 "DAC-D1" I R 1600 1600 50 
@@ -213,8 +126,6 @@ F4 "+5V" I L 8250 3700 50
 F5 "+9V" I L 8250 3550 50 
 F6 "-3.3V" I R 9300 3800 50 
 $EndSheet
-Text Notes 9100 1750 0    50   ~ 0
-Second stage amplifier:\nGain 13
 $Comp
 L OS-LD:IRFP4568PbF Q1
 U 1 1 5D20B94F
@@ -243,29 +154,6 @@ Wire Wire Line
 	6150 5550 6150 7050
 Connection ~ 6150 7300
 Wire Wire Line
-	8550 1350 8700 1350
-Wire Wire Line
-	9100 1450 8950 1450
-Wire Wire Line
-	8950 1450 8950 2300
-Wire Wire Line
-	9900 2300 9850 2300
-Wire Wire Line
-	9900 2300 9900 3800
-Wire Wire Line
-	8950 2300 9050 2300
-Wire Wire Line
-	8800 2650 9450 2650
-Wire Wire Line
-	8800 1650 8800 2650
-Connection ~ 9450 2650
-Wire Wire Line
-	9450 2650 10100 2650
-Wire Wire Line
-	10100 2650 10100 2100
-Wire Wire Line
-	10100 1800 10100 1250
-Wire Wire Line
 	2000 3700 2000 3100
 Wire Wire Line
 	2000 3100 1600 3100
@@ -275,25 +163,6 @@ Wire Wire Line
 	1600 3200 1900 3200
 Wire Wire Line
 	1800 3300 1600 3300
-Connection ~ 10100 1250
-Wire Wire Line
-	10100 1250 10100 1150
-$Comp
-L power:+5V #PWR05
-U 1 1 5CDED736
-P 10100 1150
-F 0 "#PWR05" H 10100 1000 50  0001 C CNN
-F 1 "+5V" H 10115 1323 50  0000 C CNN
-F 2 "" H 10100 1150 50  0001 C CNN
-F 3 "" H 10100 1150 50  0001 C CNN
-	1    10100 1150
-	1    0    0    -1  
-$EndComp
-Connection ~ 9450 2300
-Text GLabel 10250 1250 2    50   Input ~ 0
-+5V
-Wire Wire Line
-	10250 1250 10100 1250
 Text GLabel 1950 7300 0    50   Input ~ 0
 GND
 $Comp
