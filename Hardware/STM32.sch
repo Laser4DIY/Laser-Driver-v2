@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Laser-Driver-v3-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -70,9 +69,11 @@ Wire Wire Line
 Wire Wire Line
 	7150 4200 6950 4200
 $Comp
-L teensy:Teensy4.0 U?
+L Laser-Driver-v3-rescue:Teensy4.0-teensy U?
 U 1 1 5F63D3E1
 P 5850 3650
+AR Path="/5F63D3E1" Ref="U?"  Part="1" 
+AR Path="/5D037190/5F63D3E1" Ref="U?"  Part="1" 
 F 0 "U?" H 5850 5265 50  0000 C CNN
 F 1 "Teensy4.0" H 5850 5174 50  0000 C CNN
 F 2 "" H 5450 3850 50  0001 C CNN

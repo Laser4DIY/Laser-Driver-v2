@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name OS-LD)(type Legacy)(uri ${KIPRJMOD}/OS-LD.lib)(options "")(descr ""))
   (lib (name TPS63700)(type Legacy)(uri ${KIPRJMOD}/TPS63700.lib)(options "")(descr ""))
+  (lib (name Laser-Driver-v3-rescue)(type Legacy)(uri ${KIPRJMOD}/Laser-Driver-v3-rescue.lib)(options "")(descr ""))
 )
