@@ -603,8 +603,6 @@ Potentiometer for \nsetting Imax
 Connection ~ 4300 1500
 Wire Wire Line
 	6700 1500 6700 3800
-Text GLabel 7050 1500 2    50   Input ~ 0
-+5V
 Wire Wire Line
 	4000 2300 4000 3200
 Wire Wire Line
@@ -612,18 +610,10 @@ Wire Wire Line
 Wire Wire Line
 	4300 1500 6700 1500
 Wire Wire Line
-	7050 1500 6700 1500
-Connection ~ 6700 1500
-Wire Wire Line
 	6450 6200 5550 6200
 Connection ~ 5550 6200
 Wire Wire Line
 	6450 3800 6450 6200
-Text GLabel 6600 6200 2    50   Input ~ 0
-GND
-Wire Wire Line
-	6600 6200 6450 6200
-Connection ~ 6450 6200
 Wire Notes Line
 	3900 5000 6050 5000
 Wire Notes Line
