@@ -286,8 +286,6 @@ Wire Wire Line
 	1400 5500 1250 5500
 Wire Wire Line
 	1250 5500 1250 5200
-Text GLabel 1500 4750 2    50   Input ~ 0
-+3.3V
 $Comp
 L power:+3.3V #PWR01
 U 1 1 5D3C851F
@@ -299,13 +297,6 @@ F 3 "" H 1250 4550 50  0001 C CNN
 	1    1250 4550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1250 4900 1250 4750
-Wire Wire Line
-	1500 4750 1250 4750
-Connection ~ 1250 4750
-Wire Wire Line
-	1250 4750 1250 4550
 Wire Wire Line
 	1250 5500 900  5500
 Wire Wire Line
@@ -543,4 +534,6 @@ Wire Wire Line
 Wire Wire Line
 	3600 4400 3600 4850
 Connection ~ 3600 4850
+Wire Wire Line
+	1250 4550 1250 4900
 $EndSCHEMATC

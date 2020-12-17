@@ -19,8 +19,8 @@ U 1 1 5D0D129D
 P 3750 3050
 AR Path="/5D0D129D" Ref="U?"  Part="1" 
 AR Path="/5D0C0D63/5D0D129D" Ref="U4"  Part="1" 
-F 0 "U4" H 3750 4231 50  0000 C CNN
-F 1 "AD9744" H 3750 4140 50  0000 C CNN
+F 0 "U4" H 4000 4100 50  0000 C CNN
+F 1 "AD9744" H 4100 4000 50  0000 C CNN
 F 2 "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm" H 4350 3250 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9744.pdf" H 4350 3250 50  0001 C CNN
 	1    3750 3050
@@ -294,8 +294,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm185-adj.pdf" H 9200 2650 50  0001 C CIN
 	1    9200 2650
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	9200 1600 9200 1700
 $Comp
 L Device:R R21
 U 1 1 5D17E776
@@ -418,8 +416,6 @@ Connection ~ 6250 2950
 Wire Wire Line
 	7350 2400 7500 2400
 Connection ~ 8100 2400
-Wire Wire Line
-	8100 2400 8100 1950
 $Comp
 L power:+9V #PWR014
 U 1 1 5D09D7FB
@@ -593,29 +589,9 @@ F 3 "" H 9200 1600 50  0001 C CNN
 	1    9200 1600
 	1    0    0    -1  
 $EndComp
-Text GLabel 8200 1950 2    50   Input ~ 0
-+9V
-Wire Wire Line
-	8200 1950 8100 1950
-Connection ~ 8100 1950
-Wire Wire Line
-	8100 1950 8100 1850
-Text GLabel 9300 1700 2    50   Input ~ 0
-+12V
-Wire Wire Line
-	9300 1700 9200 1700
-Connection ~ 9200 1700
-Wire Wire Line
-	9200 1700 9200 1900
-Text GLabel 3850 1650 2    50   Input ~ 0
-+3.3V
 Connection ~ 3700 1650
 Wire Wire Line
-	3750 1650 3850 1650
-Connection ~ 3750 1650
-Text GLabel 3550 4200 0    50   Input ~ 0
-GND
+	9200 1600 9200 1900
 Wire Wire Line
-	3550 4200 3650 4200
-Connection ~ 3650 4200
+	8100 1850 8100 2400
 $EndSCHEMATC
