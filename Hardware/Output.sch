@@ -455,17 +455,6 @@ F 3 "~" H 8750 3100 50  0001 C CNN
 	1    8750 3100
 	-1   0    0    1   
 $EndComp
-$Comp
-L Device:R R17
-U 1 1 5D0DB2E7
-P 5300 5350
-F 0 "R17" V 5507 5350 50  0000 C CNN
-F 1 "25R" V 5416 5350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5230 5350 50  0001 C CNN
-F 3 "~" H 5300 5350 50  0001 C CNN
-	1    5300 5350
-	1    0    0    -1  
-$EndComp
 Text Notes 7600 3450 0    50   ~ 0
 Optional follower Opamp\nto increase current output \nof the amplifier stage from \n250mA to 500mA max
 Wire Notes Line
