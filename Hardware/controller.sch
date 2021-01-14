@@ -76,7 +76,7 @@ AR Path="/5F63D3E1" Ref="U?"  Part="1"
 AR Path="/5D037190/5F63D3E1" Ref="U2"  Part="1" 
 F 0 "U2" H 5850 5265 50  0000 C CNN
 F 1 "Teensy4.0" H 5850 5174 50  0000 C CNN
-F 2 "" H 5450 3850 50  0001 C CNN
+F 2 "Hardware:Teensy40" H 5450 3850 50  0001 C CNN
 F 3 "" H 5450 3850 50  0001 C CNN
 	1    5850 3650
 	1    0    0    -1  
