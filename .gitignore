@@ -25,3 +25,5 @@ fp-info-cache
 
 # Exported BOM files
 *.xml
+
+*.zip

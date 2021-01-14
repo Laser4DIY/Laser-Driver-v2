@@ -117,7 +117,7 @@ F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 3200 5150 50  0001 C CNN
 	1    3200 5150
 	1    0    0    -1  
 $EndComp
-Text Label 3900 3550 0    50   ~ 0
+Text Label 2350 4350 0    50   ~ 0
 SET
 Wire Wire Line
 	5050 2650 5050 2600
@@ -198,7 +198,7 @@ Wire Notes Line
 	5450 1550 5450 3200
 Wire Notes Line
 	5450 3200 2100 3200
-Text Notes 4150 1950 0    50   ~ 10
+Text Notes 4150 1700 0    50   ~ 10
 Overcurrent Comparation Circuit
 $Comp
 L Device:R R?
@@ -394,7 +394,7 @@ Text HLabel 3800 1350 1    50   Input ~ 0
 OCSense
 Text HLabel 9800 3800 2    50   Input ~ 0
 OCMosfet
-Text HLabel 7950 5650 0    50   Input ~ 0
+Text HLabel 7100 5650 0    50   Input ~ 0
 OCControl
 Text HLabel 9800 5350 2    50   Input ~ 0
 OCStatus
@@ -406,16 +406,16 @@ Wire Notes Line
 	7250 2850 9400 2850
 Wire Notes Line
 	9400 4550 7250 4550
-Text Notes 8600 3000 0    50   ~ 10
+Text Notes 8600 2950 0    50   ~ 10
 Mosfer Driver Stage
 Wire Notes Line
-	7450 6150 7450 4700
+	7250 6250 7250 4700
 Wire Notes Line
-	7450 4700 9400 4700
+	7250 4700 9400 4700
 Wire Notes Line
-	9400 4700 9400 6150
+	9400 4700 9400 6250
 Wire Notes Line
-	7450 6150 9400 6150
+	7250 6250 9400 6250
 Text Notes 8900 4800 0    50   ~ 10
 MCU Control
 $Comp
@@ -501,7 +501,7 @@ F 3 "" H 8650 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7950 5650 8100 5650
+	7100 5650 8100 5650
 Connection ~ 8100 5650
 Wire Wire Line
 	8100 5650 8350 5650
