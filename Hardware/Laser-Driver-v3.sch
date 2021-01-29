@@ -594,4 +594,40 @@ Wire Wire Line
 Connection ~ 5500 5500
 Wire Wire Line
 	5750 5950 5650 5950
+$Comp
+L Device:C C6
+U 1 1 6016C4BB
+P 5750 6300
+F 0 "C6" H 5865 6346 50  0000 L CNN
+F 1 "100nF" H 5865 6255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5788 6150 50  0001 C CNN
+F 3 "~" H 5750 6300 50  0001 C CNN
+	1    5750 6300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR053
+U 1 1 6016CE5F
+P 5750 6450
+F 0 "#PWR053" H 5750 6200 50  0001 C CNN
+F 1 "GND" H 5755 6277 50  0000 C CNN
+F 2 "" H 5750 6450 50  0001 C CNN
+F 3 "" H 5750 6450 50  0001 C CNN
+	1    5750 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 6150 5750 5950
+Connection ~ 5750 5950
+$Comp
+L Mechanical:Heatsink HS1
+U 1 1 6016B36F
+P 8500 1500
+F 0 "HS1" V 8453 1680 50  0000 L CNN
+F 1 "Heatsink" V 8544 1680 50  0000 L CNN
+F 2 "Heatsink:Heatsink_Aavid-TV5G_TO220_Horizontal" H 8512 1500 50  0001 C CNN
+F 3 "~" H 8512 1500 50  0001 C CNN
+	1    8500 1500
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

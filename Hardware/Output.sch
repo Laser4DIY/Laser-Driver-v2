@@ -19,8 +19,8 @@ U 1 1 5D0D129D
 P 2600 3450
 AR Path="/5D0D129D" Ref="U?"  Part="1" 
 AR Path="/5D0C0D63/5D0D129D" Ref="U4"  Part="1" 
-F 0 "U4" H 2850 4500 50  0000 C CNN
-F 1 "AD9744" H 2950 4400 50  0000 C CNN
+F 0 "U4" H 2950 4400 50  0000 C CNN
+F 1 "AD9744" H 2200 4400 50  0000 C CNN
 F 2 "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm" H 3200 3650 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD9744.pdf" H 3200 3650 50  0001 C CNN
 	1    2600 3450
@@ -68,12 +68,6 @@ Wire Wire Line
 Connection ~ 2600 4600
 Wire Wire Line
 	2600 4600 3250 4600
-Wire Wire Line
-	2500 2450 2500 2050
-Wire Wire Line
-	2600 2450 2600 2050
-Wire Wire Line
-	2600 2050 2550 2050
 $Comp
 L Device:R R?
 U 1 1 5D0D12BB
@@ -358,16 +352,14 @@ Amplifier stage converts \nthe current output of the DAC \nto +5.25V +- 0.75V\n-
 $Comp
 L power:+3.3V #PWR012
 U 1 1 5D1B0B7D
-P 2550 2050
-F 0 "#PWR012" H 2550 1900 50  0001 C CNN
-F 1 "+3.3V" H 2565 2223 50  0000 C CNN
-F 2 "" H 2550 2050 50  0001 C CNN
-F 3 "" H 2550 2050 50  0001 C CNN
-	1    2550 2050
+P 2600 1900
+F 0 "#PWR012" H 2600 1750 50  0001 C CNN
+F 1 "+3.3V" H 2615 2073 50  0000 C CNN
+F 2 "" H 2600 1900 50  0001 C CNN
+F 3 "" H 2600 1900 50  0001 C CNN
+	1    2600 1900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2550 2050 2500 2050
 Wire Wire Line
 	3200 3450 3650 3450
 Wire Wire Line
@@ -469,7 +461,6 @@ Wire Notes Line
 	7300 2000 4750 2000
 Wire Notes Line
 	4750 2000 4750 3450
-Connection ~ 2550 2050
 Wire Wire Line
 	8400 2800 8750 2800
 Wire Wire Line
@@ -615,4 +606,70 @@ Wire Wire Line
 Wire Wire Line
 	9500 2900 8500 2900
 Connection ~ 8500 2900
+$Comp
+L Device:C C?
+U 1 1 60145D90
+P 2850 2050
+AR Path="/60145D90" Ref="C?"  Part="1" 
+AR Path="/5D0C0D63/60145D90" Ref="C8"  Part="1" 
+F 0 "C8" H 2735 2004 50  0000 R CNN
+F 1 "100nF" H 2735 2095 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2888 1900 50  0001 C CNN
+F 3 "~" H 2850 2050 50  0001 C CNN
+	1    2850 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60147488
+P 2100 2050
+AR Path="/60147488" Ref="C?"  Part="1" 
+AR Path="/5D0C0D63/60147488" Ref="C7"  Part="1" 
+F 0 "C7" H 1985 2004 50  0000 R CNN
+F 1 "100nF" H 1985 2095 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2138 1900 50  0001 C CNN
+F 3 "~" H 2100 2050 50  0001 C CNN
+	1    2100 2050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2600 1900 2850 1900
+Wire Wire Line
+	2600 1900 2600 2300
+Connection ~ 2600 1900
+Wire Wire Line
+	2100 1900 2600 1900
+Wire Wire Line
+	2600 2300 2500 2300
+Wire Wire Line
+	2500 2300 2500 2450
+Connection ~ 2600 2300
+Wire Wire Line
+	2600 2300 2600 2450
+$Comp
+L power:GND #PWR?
+U 1 1 60151AD5
+P 2100 2200
+AR Path="/60151AD5" Ref="#PWR?"  Part="1" 
+AR Path="/5D0C0D63/60151AD5" Ref="#PWR055"  Part="1" 
+F 0 "#PWR055" H 2100 1950 50  0001 C CNN
+F 1 "GND" H 2105 2027 50  0000 C CNN
+F 2 "" H 2100 2200 50  0001 C CNN
+F 3 "" H 2100 2200 50  0001 C CNN
+	1    2100 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6015229A
+P 2850 2200
+AR Path="/6015229A" Ref="#PWR?"  Part="1" 
+AR Path="/5D0C0D63/6015229A" Ref="#PWR056"  Part="1" 
+F 0 "#PWR056" H 2850 1950 50  0001 C CNN
+F 1 "GND" H 3000 2150 50  0000 C CNN
+F 2 "" H 2850 2200 50  0001 C CNN
+F 3 "" H 2850 2200 50  0001 C CNN
+	1    2850 2200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
