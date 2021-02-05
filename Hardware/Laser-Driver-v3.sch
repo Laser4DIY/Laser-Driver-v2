@@ -133,7 +133,7 @@ L Connector:Screw_Terminal_01x01 J5
 U 1 1 5D38D38E
 P 8000 5950
 F 0 "J5" H 8080 5992 50  0000 L CNN
-F 1 " 74650074R" H 8080 5901 50  0000 L CNN
+F 1 "7460307" H 8080 5901 50  0000 L CNN
 F 2 "Hardware:7460307" H 8000 5950 50  0001 C CNN
 F 3 "~" H 8000 5950 50  0001 C CNN
 	1    8000 5950
@@ -144,7 +144,7 @@ L Connector:Screw_Terminal_01x01 J2
 U 1 1 5D38D8B8
 P 8000 950
 F 0 "J2" H 8080 992 50  0000 L CNN
-F 1 " 74650074R" H 8080 901 50  0000 L CNN
+F 1 "7460307" H 8080 901 50  0000 L CNN
 F 2 "Hardware:7460307" H 8000 950 50  0001 C CNN
 F 3 "~" H 8000 950 50  0001 C CNN
 	1    8000 950 
@@ -420,17 +420,6 @@ Wire Wire Line
 	7650 5200 7650 5250
 Connection ~ 7800 5200
 $Comp
-L Mechanical:MountingHole_Pad H1
-U 1 1 6014D0CD
-P 5000 7100
-F 0 "H1" H 5100 7149 50  0000 L CNN
-F 1 "M3" H 5100 7058 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 5000 7100 50  0001 C CNN
-F 3 "~" H 5000 7100 50  0001 C CNN
-	1    5000 7100
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole_Pad H2
 U 1 1 6014DDE2
 P 5350 7100
@@ -461,50 +450,6 @@ F 1 "M3" H 6150 7058 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 6050 7100 50  0001 C CNN
 F 3 "~" H 6050 7100 50  0001 C CNN
 	1    6050 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR052
-U 1 1 6014EB9A
-P 6050 7200
-F 0 "#PWR052" H 6050 6950 50  0001 C CNN
-F 1 "GND" H 6055 7027 50  0000 C CNN
-F 2 "" H 6050 7200 50  0001 C CNN
-F 3 "" H 6050 7200 50  0001 C CNN
-	1    6050 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR051
-U 1 1 6014F236
-P 5700 7200
-F 0 "#PWR051" H 5700 6950 50  0001 C CNN
-F 1 "GND" H 5705 7027 50  0000 C CNN
-F 2 "" H 5700 7200 50  0001 C CNN
-F 3 "" H 5700 7200 50  0001 C CNN
-	1    5700 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR050
-U 1 1 6014F447
-P 5350 7200
-F 0 "#PWR050" H 5350 6950 50  0001 C CNN
-F 1 "GND" H 5355 7027 50  0000 C CNN
-F 2 "" H 5350 7200 50  0001 C CNN
-F 3 "" H 5350 7200 50  0001 C CNN
-	1    5350 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR049
-U 1 1 6014F621
-P 5000 7200
-F 0 "#PWR049" H 5000 6950 50  0001 C CNN
-F 1 "GND" H 5005 7027 50  0000 C CNN
-F 2 "" H 5000 7200 50  0001 C CNN
-F 3 "" H 5000 7200 50  0001 C CNN
-	1    5000 7200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -624,10 +569,91 @@ L Mechanical:Heatsink HS1
 U 1 1 6016B36F
 P 8500 1500
 F 0 "HS1" V 8453 1680 50  0000 L CNN
-F 1 "Heatsink" V 8544 1680 50  0000 L CNN
-F 2 "Heatsink:Heatsink_Aavid-TV5G_TO220_Horizontal" H 8512 1500 50  0001 C CNN
+F 1 "RA-T2X-38E" V 8544 1680 50  0000 L CNN
+F 2 "Hardware:RA-T2X-38E" H 8512 1500 50  0001 C CNN
 F 3 "~" H 8512 1500 50  0001 C CNN
 	1    8500 1500
 	0    1    1    0   
 $EndComp
+$Comp
+L power:Earth #PWR0114
+U 1 1 601A1275
+P 5550 7350
+F 0 "#PWR0114" H 5550 7100 50  0001 C CNN
+F 1 "Earth" H 5550 7200 50  0001 C CNN
+F 2 "" H 5550 7350 50  0001 C CNN
+F 3 "~" H 5550 7350 50  0001 C CNN
+	1    5550 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 7350 5550 7200
+Wire Wire Line
+	5550 7200 5700 7200
+Connection ~ 5700 7200
+Wire Wire Line
+	5700 7200 6050 7200
+Wire Wire Line
+	5550 7200 5350 7200
+Connection ~ 5550 7200
+Connection ~ 5350 7200
+Wire Wire Line
+	5350 7200 5000 7200
+Text Notes 8500 2850 0    50   ~ 0
+Heat Sink Calculations:\n\nTj = P(Rjunc-case + Rcase-hs + Rhs) + Tamb\nRjunc-case = 0.29 C/W\nRcase-hs = 0.24 C/W\nRhs = 3.4 C/W (changing heatsink will change this)\nTj = 175 C max\nTamb = 50 C max\n\nwith 3.4 C/W thermal resistance heatsink, \n28W can be dissipated in the transistor.\nwith 4.8mOhm typ Rds of the transistor,\n76A continous current can flow.
+$Comp
+L Device:R R37
+U 1 1 601CAFCA
+P 4600 7200
+F 0 "R37" H 4530 7154 50  0000 R CNN
+F 1 "1M" H 4530 7245 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4530 7200 50  0001 C CNN
+F 3 "~" H 4600 7200 50  0001 C CNN
+	1    4600 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 601CBC8D
+P 4600 7000
+F 0 "C9" H 4715 7046 50  0000 L CNN
+F 1 "100nF" H 4715 6955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4638 6850 50  0001 C CNN
+F 3 "~" H 4600 7000 50  0001 C CNN
+	1    4600 7000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 6014D0CD
+P 5000 7100
+F 0 "H1" H 5100 7149 50  0000 L CNN
+F 1 "M3" H 5100 7058 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 5000 7100 50  0001 C CNN
+F 3 "~" H 5000 7100 50  0001 C CNN
+	1    5000 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 7000 4750 7200
+Wire Wire Line
+	5000 7200 4750 7200
+Connection ~ 5000 7200
+Connection ~ 4750 7200
+Wire Wire Line
+	4450 7000 4450 7200
+$Comp
+L power:GND #PWR049
+U 1 1 601D61DD
+P 4350 7200
+F 0 "#PWR049" H 4350 6950 50  0001 C CNN
+F 1 "GND" H 4355 7027 50  0000 C CNN
+F 2 "" H 4350 7200 50  0001 C CNN
+F 3 "" H 4350 7200 50  0001 C CNN
+	1    4350 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 7200 4350 7200
+Connection ~ 4450 7200
 $EndSCHEMATC
