@@ -569,8 +569,8 @@ L Mechanical:Heatsink HS1
 U 1 1 6016B36F
 P 8500 1500
 F 0 "HS1" V 8453 1680 50  0000 L CNN
-F 1 "RA-T2X-38E" V 8544 1680 50  0000 L CNN
-F 2 "Hardware:RA-T2X-38E" H 8512 1500 50  0001 C CNN
+F 1 "ATS-1139-C1-R0" V 8544 1680 50  0000 L CNN
+F 2 "Hardware:ATS-1141" H 8512 1500 50  0001 C CNN
 F 3 "~" H 8512 1500 50  0001 C CNN
 	1    8500 1500
 	0    1    1    0   
@@ -600,7 +600,7 @@ Connection ~ 5350 7200
 Wire Wire Line
 	5350 7200 5000 7200
 Text Notes 8500 2850 0    50   ~ 0
-Heat Sink Calculations:\n\nTj = P(Rjunc-case + Rcase-hs + Rhs) + Tamb\nRjunc-case = 0.29 C/W\nRcase-hs = 0.24 C/W\nRhs = 3.4 C/W (changing heatsink will change this)\nTj = 175 C max\nTamb = 50 C max\n\nwith 3.4 C/W thermal resistance heatsink, \n28W can be dissipated in the transistor.\nwith 4.8mOhm typ Rds of the transistor,\n76A continous current can flow.
+Heat Sink Calculations:\n\nTj = P(Rjunc-case + Rcase-hs + Rhs) + Tamb\nRjunc-case = 0.29 C/W\nRcase-hs = 0.24 C/W\nRhs = 3.7 C/W (changing heatsink will change this)\nTj = 175 C max\nTamb = 50 C max\n\nwith 3.7 C/W thermal resistance heatsink, \n29W can be dissipated in the transistor.\nwith 4.8mOhm typ Rds of the transistor,\n78A continous current can flow.
 $Comp
 L Device:R R37
 U 1 1 601CAFCA
