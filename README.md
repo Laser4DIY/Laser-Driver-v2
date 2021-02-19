@@ -6,8 +6,8 @@ Laser diode driver to be used for the Laser4DIY project, see http://www.laser4di
 
 ## Design Goals
 
-Continous mode: up to 80A (at 2V)
-Pulse mode: up to 80A (at 2V), pulses <50µsec possible
+- Continous mode: up to 80A (at 2V)
+- Pulse mode: up to 80A (at 2V), pulses <50µsec possible
 
 
 
