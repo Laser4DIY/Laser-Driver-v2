@@ -3,9 +3,15 @@
 uint16_t data_l = 0;
 uint16_t data_h = 0;
 uint16_t temp;
-uint16_t value = 0xABCD; // dummy value
 uint32_t result;
 
+#define DAC_RESOLUTION    14
+
+//arduino pin number wired to the DAC D0-D13
+uint8_t const dac_pin_array[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 16, 17};
+uint8_t const dac_clk_pin = 18;
+
+uint16_t temp  = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -14,6 +20,35 @@ void setup() {
 }
 
 void loop() {
+
+  temp++;
+  dac_write(temp);
+  delay(1);
+}
+
+void dac_write(uint16_t value) {
+
+  uint8_t bit_value;
+  uint16_t temp;
+
+  digitalWriteFast( dac_clk_pin, 0);
+
+  //TODO set the MSB first
+  for (uint8_t i=0; i < DAC_RESOLUTION; i++ ) {
+
+    bit_value = value & (1 << i);
+    digitalWriteFast( dac_pin_array[i], bit_value);
+
+  }
+  //delay before toggling clk should be atleast 2nsec)
+  delayMicroseconds(1);
+  digitalWriteFast( dac_clk_pin, 1);
+  delayMicroseconds(1);
+  digitalWriteFast( dac_clk_pin, 0);
+  // TODO check if delay is needed after the clock rise.
+}
+
+void dac_write_parallel (uint16_t value) {
 
   // using GPIO6 port pins from 31, 30, 27-22, 19-16, 13-12.
   // value = 00ab cdef ghij klmn (14bit) saved in a uint16_t
@@ -42,7 +77,4 @@ void loop() {
   result = (data_h << 16) | (data_l); //result= ab00 cdef gh00 ijkl-00mn 0000 0000 0000
 
   GPIO6_DR = ( GPIO6_DR & ~(0xCFCF3000)) | result;
-
-  delay(1);
-
 }
