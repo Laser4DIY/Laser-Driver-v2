@@ -1,10 +1,4 @@
 
-
-uint16_t data_l = 0;
-uint16_t data_h = 0;
-uint16_t temp;
-uint32_t result;
-
 #define DAC_RESOLUTION    14
 
 //arduino pin number wired to the DAC D0-D13
@@ -49,6 +43,10 @@ void dac_write(uint16_t value) {
 }
 
 void dac_write_parallel (uint16_t value) {
+
+  uint16_t data_l = 0;
+  uint16_t data_h = 0;
+  uint32_t result;
 
   // using GPIO6 port pins from 31, 30, 27-22, 19-16, 13-12.
   // value = 00ab cdef ghij klmn (14bit) saved in a uint16_t
