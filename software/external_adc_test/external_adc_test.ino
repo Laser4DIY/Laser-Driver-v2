@@ -48,5 +48,5 @@ uint16_t read_ADS7883(void) {
   // release control of the SPI port
   SPI.endTransaction();
 
-  return((data_h << 8) | (data_l >> 2));
+  return( ((data_h << 8) | data_l ) >> 2);
 }
