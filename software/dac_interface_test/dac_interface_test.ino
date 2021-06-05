@@ -1,7 +1,21 @@
 #include <ADC.h>
 #include <ADC_util.h>
 
-#define DAC_RESOLUTION 14
+#define DAC_RESOLUTION  14
+#define DAC0_PIN        0
+#define DAC1_PIN        1
+#define DAC2_PIN        2
+#define DAC3_PIN        3
+#define DAC4_PIN        4
+#define DAC5_PIN        5
+#define DAC6_PIN        6
+#define DAC7_PIN        7
+#define DAC8_PIN        8
+#define DAC9_PIN        9
+#define DAC10_PIN       14
+#define DAC11_PIN       15
+#define DAC12_PIN       16
+#define DAC13_PIN       17
 
 const int readPin = A13;
 
@@ -9,13 +23,42 @@ ADC *adc = new ADC(); // adc object
 int max_value = 0;
 
 //arduino pin number wired to the DAC D0-D13
-uint8_t const dac_pin_array[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 16, 17};
+uint8_t const dac_pin_array[] = {DAC0_PIN,
+                                 DAC1_PIN,
+                                 DAC2_PIN,
+                                 DAC3_PIN,
+                                 DAC4_PIN,
+                                 DAC5_PIN,
+                                 DAC6_PIN,
+                                 DAC7_PIN,
+                                 DAC8_PIN,
+                                 DAC9_PIN,
+                                 DAC10_PIN,
+                                 DAC11_PIN,
+                                 DAC12_PIN,
+                                 DAC13_PIN};
 uint8_t const dac_clk_pin = 18;
 
 uint16_t temp = 0;
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
+
+  pinMode(DAC0_PIN, OUTPUT);
+  pinMode(DAC1_PIN, OUTPUT);
+  pinMode(DAC2_PIN, OUTPUT);
+  pinMode(DAC3_PIN, OUTPUT);
+  pinMode(DAC4_PIN, OUTPUT);
+  pinMode(DAC5_PIN, OUTPUT);
+  pinMode(DAC6_PIN, OUTPUT);
+  pinMode(DAC7_PIN, OUTPUT);
+  pinMode(DAC8_PIN, OUTPUT);
+  pinMode(DAC9_PIN, OUTPUT);
+  pinMode(DAC10_PIN, OUTPUT);
+  pinMode(DAC11_PIN, OUTPUT);
+  pinMode(DAC12_PIN, OUTPUT);
+  pinMode(DAC13_PIN, OUTPUT);
+  
   pinMode(readPin, INPUT);
 
   Serial.begin(115200);
@@ -46,12 +89,14 @@ void setup() {
   delay(500);
 }
 
-int adc_value = 0;
+uint16_t adc_value = 0;
 
 void loop() {
 
-  adc_value = direct_adc_read();
-  Serial.println(adc_value, DEC);
+  //adc_value = direct_adc_read();
+  //Serial.println(adc_value, DEC);
+
+  adc_value++; 
 
   //do processing of the adc value here or adc read function. before putting it into the dac
   dac_write(adc_value);
@@ -60,7 +105,7 @@ void loop() {
 
 void dac_write(uint16_t value) {
 
-  uint8_t bit_value;
+  uint16_t bit_value;
   uint16_t temp;
 
   digitalWriteFast( dac_clk_pin, 0);
@@ -69,10 +114,10 @@ void dac_write(uint16_t value) {
   for (uint8_t i = 0; i < DAC_RESOLUTION; i++) {
 
     bit_value = value & (1 << i);
-    digitalWriteFast( dac_pin_array[i], bit_value);
+    digitalWriteFast( dac_pin_array[i], (bit_value >> i));
   }
   //delay before toggling clk should be atleast 2nsec)
-  delayMicroseconds(1);
+  //delayMicroseconds(1);
   digitalWriteFast( dac_clk_pin, 1);
   delayMicroseconds(1);
   digitalWriteFast( dac_clk_pin, 0);
